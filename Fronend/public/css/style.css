@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+:root {
+	--dark-color-a: #002B5B;
+	--dark-color-b: #002B5B;
+	--light-color: #FFF8BC;
+	--success-color: #5cb85c;
+	--error-color: #d9534f;
+}
+
+.image {
+	color: #FFF8BC;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	background: var(--light-color);
+	margin: 20px;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.btn {
+	cursor: pointer;
+	width: 150px;
+	padding: 5px 15px;
+	background: var(--light-color);
+	color: var(--dark-color-a);
+	border: 0;
+	font-size: 17px;
+	margin: 0;
+	display: inline;
+	margin-left: 10px;
+}
+
+.save {
+	cursor: pointer;
+	padding: 5px 15px;
+	background: var(--light-color);
+	color: var(--dark-color-a);
+	border: 0;
+	font-size: 17px;
+	float: left;
+	margin-right: 10px;
+	margin-left: 700px;
+}
+/* Chat Page */
+
+.chat-container {
+	max-width: 1200px;
+	background: #fff;
+	margin: 30px auto;
+	overflow: hidden;
+}
+
+.chat-header {
+	background: var(--dark-color-a);
+	color: #fff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	/* justify-content: space-between; */
+}
+
+.chat-main {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+}
+
+.chat-sidebar {
+	background: var(--dark-color-b);
+	color: #fff;
+	padding: 20px 20px 60px;
+	overflow-y: scroll;
+}
+
+.chat-sidebar h2 {
+	font-size: 20px;
+	background: rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.chat-sidebar h3 {
+	margin-bottom: 15px;
+}
+
+.chat-sidebar ul li {
+	padding: 10px 0;
+}
+
+.chat-messages {
+	padding: 30px;
+	max-height: 500px;
+	overflow-y: scroll;
+}
+
+.chat-messages .message {
+	padding: 10px;
+	margin-bottom: 15px;
+	background-color: var(--light-color);
+	border-radius: 5px;
+}
+
+.chat-messages .message .meta {
+	font-size: 15px;
+	font-weight: bold;
+	color: var(--dark-color-b);
+	opacity: 0.7;
+	margin-bottom: 7px;
+}
+
+.chat-messages .message .meta span {
+	color: #777;
+}
+
+.chat-form-container {
+	padding: 20px 30px;
+	background-color: var(--dark-color-a);
+}
+
+.chat-form-container form {
+	display: flex;
+}
+
+.chat-form-container input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	flex: 1;
+}
+
+/* Join Page */
+.join-container {
+	max-width: 500px;
+	margin: 80px auto;
+	color: #fff;
+}
+
+.join-header {
+	text-align: center;
+	padding: 20px;
+	background: var(--dark-color-a);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.join-main {
+	padding: 30px 40px;
+	background: var(--dark-color-b);
+}
+
+.join-main p {
+	margin-bottom: 20px;
+}
+
+.join-main .form-control {
+	margin-bottom: 20px;
+}
+
+.join-main label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.join-main input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+}
+
+.join-main select {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+}
+
+.join-main .btn {
+	margin-top: 20px;
+	width: 100%;
+}
+
+@media (max-width: 700px) {
+	.chat-main {
+		display: block;
+	}
+
+	.chat-sidebar {
+		display: none;
+	}
+}
+Footer
+/* General CSS Setup */
+body{
+  background-color: lightblue;
+  font-family: "Ubuntu-Italic", "Lucida Sans", helvetica, sans;
+}
+
+/* container */
+.container {
+  padding: 5% 5%;
+}
+
+.left-top {
+	float:left;
+	clear: both;
+}
+
+.right-in{
+	float: right;
+	clear: both;
+}
+
+/* CSS talk bubble */
+.talk-bubble {
+	margin: 40px;
+  display: inline-block;
+  position: relative;
+	width: 200px;
+	height: auto;
+	background-color: lightyellow;
+	padding-bottom: 20px;
+	border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+}
+
+.rectangle {
+  height: 10px;
+  width: 100%;
+  background-color: lightyellow;
+	border-radius: 30px;
+	margin-bottom: 20px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+}
+
+/* Right triangle placed top left flush. */
+.tri-right.border.left-top:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -40px;
+	right: auto;
+  top: -8px;
+	bottom: auto;
+	border: 32px solid;
+	border-color: #666 transparent transparent transparent;
+}
+.tri-right.left-top:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -20px;
+	right: auto;
+  top: 0px;
+	bottom: auto;
+	border: 22px solid;
+	float:left;
+	clear: both;
+	border-color: lightyellow transparent transparent transparent;
+}
+
+/* Right triangle, left side slightly down */
+.tri-right.border.left-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -40px;
+	right: auto;
+  top: 30px;
+	bottom: auto;
+	border: 20px solid;
+	border-color: #666 #666 transparent transparent;
+}
+.tri-right.left-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -20px;
+	right: auto;
+  top: 38px;
+	bottom: auto;
+	border: 12px solid;
+	border-color: lightyellow lightyellow transparent transparent;
+}
+
+/*Right triangle, placed bottom left side slightly in*/
+.tri-right.border.btm-left:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: -8px;
+  right: auto;
+  top: auto;
+	bottom: -40px;
+	border: 32px solid;
+	border-color: transparent transparent transparent #666;
+}
+.tri-right.btm-left:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0px;
+  right: auto;
+  top: auto;
+	bottom: -20px;
+	border: 22px solid;
+	border-color: transparent transparent transparent lightyellow;
+}
+
+/*Right triangle, placed bottom left side slightly in*/
+.tri-right.border.btm-left-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 30px;
+  right: auto;
+  top: auto;
+	bottom: -40px;
+	border: 20px solid;
+	border-color: #666 transparent transparent #666;
+}
+.tri-right.btm-left-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 38px;
+  right: auto;
+  top: auto;
+	bottom: -20px;
+	border: 12px solid;
+	border-color: lightyellow transparent transparent lightyellow;
+}
+
+/*Right triangle, placed bottom right side slightly in*/
+.tri-right.border.btm-right-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 30px;
+	bottom: -40px;
+	border: 20px solid;
+	border-color: #666 #666 transparent transparent;
+}
+.tri-right.btm-right-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 38px;
+	bottom: -20px;
+	border: 12px solid;
+	border-color: lightyellow lightyellow transparent transparent;
+}
+/*
+	left: -8px;
+  right: auto;
+  top: auto;
+	bottom: -40px;
+	border: 32px solid;
+	border-color: transparent transparent transparent #666;
+	left: 0px;
+  right: auto;
+  top: auto;
+	bottom: -20px;
+	border: 22px solid;
+	border-color: transparent transparent transparent lightyellow;
+
+/*Right triangle, placed bottom right side slightly in*/
+.tri-right.border.btm-right:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: -8px;
+	bottom: -40px;
+	border: 20px solid;
+	border-color: #666 #666 transparent transparent;
+}
+.tri-right.btm-right:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 0px;
+	bottom: -20px;
+	border: 12px solid;
+	border-color: lightyellow lightyellow transparent transparent;
+}
+
+/* Right triangle, right side slightly down*/
+.tri-right.border.right-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: -40px;
+  top: 30px;
+	bottom: auto;
+	border: 20px solid;
+	border-color: #666 transparent transparent #666;
+}
+.tri-right.right-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: -20px;
+  top: 38px;
+	bottom: auto;
+	border: 12px solid;
+	border-color: lightyellow transparent transparent lightyellow;
+	float:right;
+	clear:both;
+}
+
+/* Right triangle placed top right flush. */
+.tri-right.border.right-top:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: -40px;
+  top: -8px;
+	bottom: auto;
+	border: 32px solid;
+	border-color: #666 transparent transparent transparent;
+}
+.tri-right.right-top:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: -20px;
+  top: 0px;
+	bottom: auto;
+	border: 20px solid;
+	border-color: lightyellow transparent transparent transparent;
+}
+
+/* talk bubble contents */
+.talktext{
+  padding: 1em;
+	text-align: left;
+  line-height: 1.5em;
+}
+
+.talktext p{
+  /* remove webkit p margins */
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+.Send {
+	font-size:20px;
+	font-family:Arial;
+	width:70px;
+	height:43px;
+	border-width:1px;
+	color:#fff;
+	border-color:#4e6096;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	text-shadow: 0px 1px 0px #283966;
+	background:linear-gradient(rgb(120, 146, 194), #476e9e);
+}
+
+.rectangle p{
+	text-align: center;
+}
+
+.Send:hover {
+	background: -webkit-linear-gradient(#476e9e, rgb(120, 146, 194));
+	background: -o-linear-gradient(#476e9e, rgb(120, 146, 194));
+	background: linear-gradient(#476e9e, rgb(120, 146, 194));
+}
+
+
+.save-button {
+  font-size:21px;
+  font-family:Verdana;
+  width:92px;
+  height:50px;
+  border-width:1px;
+  color:#ffffff;
+  border-color:#124d77;
+  font-weight:bold;
+  border-top-left-radius:12px;
+  border-top-right-radius:12px;
+  border-bottom-left-radius:12px;
+  border-bottom-right-radius:12px;
+  box-shadow:inset 0px 1px 0px 0px #54a3f7;
+  text-shadow:inset 0px 1px 0px #154682;
+  background:linear-gradient(#007dc1, #0061a7);
+}
+
+.save-button:hover {
+  background: linear-gradient(#0061a7, #007dc1);
+}
+
+#form { padding: 0.25rem; margin-bottom: 1%; position: fixed; bottom: 0; left: 0; right: 0; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); }
+#input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
+#input:focus { outline: none; }
