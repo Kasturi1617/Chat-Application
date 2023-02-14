@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This is a server",
   "main": "server.js",
-  "start": "nodemon server.js",
+  "start": "node server.js",
   "author": "Kasturi",
   "license": "ISC",
   "dependencies": {
